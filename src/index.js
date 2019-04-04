@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import style from './style.css';
 // ucomment to use serviceWorker
 //import * as serviceWorker from './serviceWorker';
 

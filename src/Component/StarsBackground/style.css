@@ -1,0 +1,20 @@
+
+.stars-layer {
+  display: absolute;
+  height: 100%;
+  width: 100%;
+}
+.stars {
+  will-change: opacity;
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}

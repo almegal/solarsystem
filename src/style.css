@@ -1,0 +1,14 @@
+html, body, .main, .wrapper {
+  margin: 0;
+  min-height: 100%;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: scroll;
+}
+body {
+ background-color: #25404c;
+}

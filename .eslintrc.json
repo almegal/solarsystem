@@ -15,6 +15,7 @@
         "react"
     ],
     "rules": {
+      "no-unused-vars": ["error", { "varsIgnorePattern": "style" }],
         "indent": [
             "error",
             "tab"
