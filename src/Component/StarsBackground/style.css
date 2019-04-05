@@ -1,4 +1,6 @@
-
+.stars-component {
+  z-index: -100;
+}
 .stars-layer {
   display: absolute;
   height: 100%;

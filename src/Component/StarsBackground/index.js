@@ -13,12 +13,12 @@ StarsLayer have by default state frequency=100
 // WARNING: not recomend set frequency more than 1500;
 */
 
-const Stars = () => {
+const Stars = (props) => {
 	// set state of amount stars
 	// set state of view screen size
 	const [size, ] = useState(3);
 	const [animate, ] = useState(true);
-	const [frequency, ] = useState(40);
+	const [frequency, ] = useState(25);
 	const [windowView, ] = useState({
 		width: window.innerWidth,
 		height: window.innerHeight,
@@ -33,6 +33,7 @@ const Stars = () => {
 				animate={animate}
 				{...windowView}
 			/>
+			{props.children}
 		</div>
 	);
 };
