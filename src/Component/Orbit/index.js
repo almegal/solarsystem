@@ -4,10 +4,10 @@ import Orbit from './Orbit';
 
 const planetArray = [
 	{
-  		r: 290,
+  		r: 310,
   		speedRotationArroundCentr: 1500,
   		id: 'Mars',
-  		size: 40,
+  		size: 34,
   		img: icon.mars,
   		cx: window.innerWidth / 2,
   		cy: window.innerHeight / 2,
@@ -22,25 +22,25 @@ const planetArray = [
 		cy: window.innerHeight / 2,
 	},
 	{
-		r: 220,
+		r: 240,
 		speedRotationArroundCentr: 1000,
 		id: 'Earth',
-		size: 60,
+		size: 40,
 		img: icon.worldwide,
 		cx: window.innerWidth / 2,
 		cy: window.innerHeight / 2,
 	},
   	{
-  		r: 140,
+  		r: 155,
   		speedRotationArroundCentr: 400,
   		id: 'Venus',
-  		size: 30,
+  		size: 25,
   		img: icon.venus,
   		cx: window.innerWidth / 2,
   		cy: window.innerHeight / 2,
   	},
 	{
-		r: 100,
+		r: 120,
 		speedRotationArroundCentr: 100,
 		speedRotationArroundOwnAxis: 100,
 		id: 'Mercury',

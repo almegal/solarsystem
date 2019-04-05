@@ -6,9 +6,11 @@ const inter = (x,y) => {
 };
 
 const Planet = props => {
-
+	//
 	const { arr, id, size, speed, setOpen, open } = props;
+	//
 	const [restart, setRestart] = useState(false);
+	//
 	const [{xy} , setXY] = useSpring(() => ({
 		from: arr[0],
 		config: {
