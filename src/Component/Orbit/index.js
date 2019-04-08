@@ -1,7 +1,7 @@
 import React from 'react';
 import * as icon from '../../img/index';
 import Orbit from './Orbit';
-
+import ControlPanel from '../ControlPanel/';
 const planetArray = [
 	{
   		r: 310,
@@ -62,7 +62,9 @@ const planetArray = [
 const SolarSystem = () => {
 	return (
 		<div className='solar-system'>
+			<ControlPanel />
 			<svg
+				className="solar"
 				width={`${window.innerWidth}`}
 				height={`${window.innerHeight}`}
 				viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}

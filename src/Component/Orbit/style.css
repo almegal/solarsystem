@@ -1,3 +1,7 @@
 .planet {
   will-change: transform;
 }
+
+.solar {
+  z-index: 1000;
+}

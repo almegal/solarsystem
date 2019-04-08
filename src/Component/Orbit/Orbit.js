@@ -26,7 +26,7 @@ const Orbit = (props) => {
 				ref={refs}
 				id={`${id}-orbit`}
 				fill='none'
-				strokeWidth={showOrbit ? 0.3 : 0}
+				strokeWidth={!showOrbit ? 0.1 : 0}
 				stroke='white'
 				r={radius}
 			/>
@@ -47,7 +47,7 @@ const Orbit = (props) => {
 					<image
 						width={size}
 						height={size}
-						xlinkHref={`http://localhost:3000${img}`}
+						xlinkHref={`${process.env.PUBLIC_URL}${img}`}
 					/>
 				</pattern>
 			</defs>
