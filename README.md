@@ -1,4 +1,7 @@
-https://1y14ry7on7.codesandbox.io/
+click to see live example
+(https://1y14ry7on7.codesandbox.io/)
+
+
 ## Simple animation with React
 
 Простая анимация солнечной системы с помощью React.
