@@ -5,16 +5,18 @@ import Orbit from './Orbit';
 const planetArray = [
 	{
   		r: 310,
+		strokeColor: 'rgba(235, 156, 65, 0.82)',
 		speedRotationArroundOwnAxis: 8000,
   		speedRotationArroundCentr: 1500,
   		id: 'Mars',
-  		size: 30,
+  		size: 32,
   		img: icon.mars,
   		cx: window.innerWidth / 2,
   		cy: window.innerHeight / 2,
   	},
 	{
 		r: 0,
+		strokeColor: 'yellow',
 		speedRotationArroundOwnAxis: 50000,
 		speedRotationArroundCentr: 1000,
 		id: 'Sun',
@@ -25,7 +27,8 @@ const planetArray = [
 	},
 	{
 		r: 240,
-		speedRotationArroundOwnAxis: 7000,
+		strokeColor: 'rgba(84, 165, 240, 0.61)',
+		speedRotationArroundOwnAxis: 6000,
 		speedRotationArroundCentr: 1000,
 		id: 'Earth',
 		size: 36,
@@ -34,8 +37,9 @@ const planetArray = [
 		cy: window.innerHeight / 2,
 	},
   	{
-  		r: 155,
-		speedRotationArroundOwnAxis: 5000,
+  		r: 165,
+		strokeColor: 'rgba(238, 57, 0, 0.78)',
+		speedRotationArroundOwnAxis: 3600,
   		speedRotationArroundCentr: 400,
   		id: 'Venus',
   		size: 25,
@@ -45,7 +49,8 @@ const planetArray = [
   	},
 	{
 		r: 120,
-		speedRotationArroundOwnAxis: 2000,
+		strokeColor: 'rgba(108, 107, 107, 1)',
+		speedRotationArroundOwnAxis: 1700,
 		speedRotationArroundCentr: 100,
 		id: 'Mercury',
 		size: 20,

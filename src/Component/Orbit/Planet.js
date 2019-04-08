@@ -11,7 +11,7 @@ const onRestFunc = (setRestart) => restart => setRestart(!restart);
 
 const Planet = props => {
 	//
-	const { arr, id, size, speed, speedOwnAxis, setOpen, open } = props;
+	const { arr, id, size,speedRotationArroundCentr, speedRotationArroundOwnAxis, setOrbit, showOrbit, strokeColor } = props;
 	//
 	const [init, setInit] = useState(true);
 	//
@@ -33,7 +33,7 @@ const Planet = props => {
 				},
 				reset:true,
 				config: {
-					duration: speedOwnAxis
+					duration: speedRotationArroundOwnAxis
 				}
 			});
 			return;
@@ -45,7 +45,7 @@ const Planet = props => {
 	const [{xy} , setXY] = useSpring(() => ({
 		from: arr[0],
 		config: {
-			duration: speed //velocity rotation around centr
+			duration: speedRotationArroundCentr //velocity rotation around centr
 		}
 	}));
 
@@ -62,18 +62,28 @@ const Planet = props => {
 	}, [ restart ]);
 
 	return (
-		<a.circle
+		<a.g
 			className='planet'
 			style={{
 				transform: interpolate([xy, r], inter)
 			}}
-			onClick={() => {
-				setOpen(!open);
-			}}
-			r={size / 2}
-			fill={`url(#${id}-image)`}
-		/>
-
+		>
+			<circle
+				fill={`${strokeColor}`}
+				r={id === 'Sun' ? 0 : size * 0.8}
+				filter={`url(#${id}-blur)`}
+				style={{
+					opacity: '0.4'
+				}}
+				 />
+			<circle
+				onClick={() => {
+					setOrbit(!showOrbit);
+				}}
+				r={size / 2}
+				fill={`url(#${id}-image)`}
+			/>
+		</a.g>
 	);
 };
 export default Planet;

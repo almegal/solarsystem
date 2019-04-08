@@ -8,8 +8,8 @@ import Planet from './Planet';
 
 const Orbit = (props) => {
 	//
-	const {r, id, size, img, cx, cy, speedRotationArroundCentr, speedRotationArroundOwnAxis} = props;
-	const [open, setOpen] = useState(false);
+	const {r, id, size, img, cx, cy, } = props;
+	const [showOrbit, setOrbit] = useState(false);
 	//
 	const [radius, ] = useState(r);
 	//
@@ -26,20 +26,22 @@ const Orbit = (props) => {
 				ref={refs}
 				id={`${id}-orbit`}
 				fill='none'
-				strokeWidth={open ? 0.3 : 0}
+				strokeWidth={showOrbit ? 0.3 : 0}
 				stroke='white'
 				r={radius}
 			/>
+			<defs>
+				<filter id={`${id}-blur`}>
+					<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+				</filter>
+			</defs>
 			{arr === null ?
 				 '' :
 				 <Planet
 				   arr={arr}
-					 size={size}
-					 id={id}
-					 speed={speedRotationArroundCentr}
-					 speedOwnAxis={speedRotationArroundOwnAxis}
-					 setOpen={setOpen}
-					 open={open}/>}
+					 setOrbit={setOrbit}
+					 showOrbit={showOrbit}
+					 {...props}/>}
 			<defs>
 				<pattern id={`${id}-image`} patternUnits="objectBoundingBox" height="1" width="1">
 					<image

@@ -18,7 +18,7 @@ const Stars = (props) => {
 	// set state of view screen size
 	const [size, ] = useState(3);
 	const [animate, ] = useState(true);
-	const [frequency, ] = useState(25);
+	const [frequency, ] = useState(35);
 	const [windowView, ] = useState({
 		width: window.innerWidth,
 		height: window.innerHeight,
