@@ -47,7 +47,7 @@ const Orbit = (props) => {
 					<image
 						width={size}
 						height={size}
-						xlinkHref={`${process.env.PUBLIC_URL}${img}`}
+						xlinkHref={`${img}`}
 					/>
 				</pattern>
 			</defs>
